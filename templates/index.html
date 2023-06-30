@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WONDERLAND KINDERGARTEN</title>
+    <meta name="description" content="Description of your website for search engines">
+    <meta name="keywords" content="keywords, relevant, to, your, website">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff"> <!-- Set the theme color for mobile browsers -->
+    <link rel="canonical" href="https://www.your-website-url.com"> <!-- Specify the canonical URL for duplicate content -->
+    
+    <!-- Open Graph meta tags (for social sharing) -->
+    <meta property="og:title" content="Your Website Title">
+    <meta property="og:description" content="Description of your website for social sharing">
+    <meta property="og:image" content="https://www.your-website-url.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.your-website-url.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Website Title">
+    <meta name="twitter:description" content="Description of your website for Twitter sharing">
+    <meta name="twitter:image" content="https://www.your-website-url.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'indexStyles.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- <input type="checkbox" class="nav-toggle" id="nav-toggle" /> -->
+        <nav>
+            <div class="navbar">
+                <div class="nav-row-1">
+                    <img class="logo-text" src="{{ url_for('static', filename = 'WONDERLAND-upscaled-no-bg.png')}}" />
+                </div>
+                <div class="nav-row-2">
+                    <div class="nav-items"><a href="#">HOME</a></div>
+                    <div class="nav-items"><a href="#">ABOUT US</a></div>
+                    <div class="nav-items"><a href="#">OUR SERVICES</a></div>
+                    <div class="nav-items"><a href="#">OUR BLOG</a></div>
+                    <div class="nav-items"><a href="#">TESTIMONIALS</a></div>
+                    <div class="nav-items"><a href="#">CONTACT US</a></div>
+                </div>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="slider">
+            <img id="slider-1" class="slider-images" src="{{ url_for('static', filename='slider-photo-1.png')}}" alt="Photo of a girl writing in class" />
+            <img id="slider-2" class="slider-images" src="{{ url_for('static', filename='slider-photo-2.png')}}" alt="Photo of a boy playing football" />
+            <img id="slider-3" class="slider-images" src="{{ url_for('static', filename='slider-photo-3.png')}}" alt="Photo of the grade 2 graduating class" />
+            <img id="slider-4" class="slider-images" src="{{ url_for('static', filename='slider-photo-4.png')}}" alt="Photo of girls smiling together in the school bus on the way home" />
+            <img id="slider-5" class="slider-images" src="{{ url_for('static', filename='slider-photo-5.png')}}" alt="Closeup photo of a young girl smiling in class" />
+            <img id="slider-6" class="slider-images" src="{{ url_for('static', filename='slider-photo-6.png')}}" alt="Photo of a gril smiling while swimming" />
+        </div>
+        <!-- <div class="slider-nav">
+            <a href="#slider-1"></a>
+            <a href="#slider-2"></a>
+            <a href="#slider-3"></a>
+            <a href="#slider-4"></a>
+            <a href="#slider-5"></a>
+            <a href="#slider-6"></a>
+        </div> -->
+    </div>
+</body>
+</html>
