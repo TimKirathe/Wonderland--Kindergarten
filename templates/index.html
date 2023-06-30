@@ -34,6 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js')}}" defer></script>
 </head>
 <body>
     <header>
@@ -57,23 +58,34 @@
             <span></span>
         </label>
     </header>
-    <div class="container">
-        <div class="slider">
-            <img id="slider-1" class="slider-images" src="{{ url_for('static', filename='slider-photo-1.png')}}" alt="Photo of a girl writing in class" />
-            <img id="slider-2" class="slider-images" src="{{ url_for('static', filename='slider-photo-2.png')}}" alt="Photo of a boy playing football" />
-            <img id="slider-3" class="slider-images" src="{{ url_for('static', filename='slider-photo-3.png')}}" alt="Photo of the grade 2 graduating class" />
-            <img id="slider-4" class="slider-images" src="{{ url_for('static', filename='slider-photo-4.png')}}" alt="Photo of girls smiling together in the school bus on the way home" />
-            <img id="slider-5" class="slider-images" src="{{ url_for('static', filename='slider-photo-5.png')}}" alt="Closeup photo of a young girl smiling in class" />
-            <img id="slider-6" class="slider-images" src="{{ url_for('static', filename='slider-photo-6.png')}}" alt="Photo of a gril smiling while swimming" />
+    <section aria-label="School Photos Carousel">
+        <div class="carousel" data-carousel>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="{{ url_for('static', filename='slider-photo-1.png')}}" alt="Photo of a girl writing in class" />
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='slider-photo-2.png')}}" alt="Photo of a boy playing football" />
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='slider-photo-3.png')}}" alt="Photo of the grade 2 graduating class" />
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='slider-photo-4.png')}}" alt="Photo of girls smiling together in the school bus on the way home" />
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='slider-photo-5.png')}}" alt="Closeup photo of a young girl smiling in class" />
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='slider-photo-6.png')}}" alt="Photo of a gril smiling while swimming" />
+                </li>
+            </ul>
         </div>
-        <!-- <div class="slider-nav">
-            <a href="#slider-1"></a>
-            <a href="#slider-2"></a>
-            <a href="#slider-3"></a>
-            <a href="#slider-4"></a>
-            <a href="#slider-5"></a>
-            <a href="#slider-6"></a>
-        </div> -->
-    </div>
+        <div class="why-choose-us">
+            <div class="text">
+                <p>Why Choose Us?</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
