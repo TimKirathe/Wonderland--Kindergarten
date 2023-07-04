@@ -123,28 +123,32 @@ ul {
 
 .enquiry-button {
     font-family: var(--font-family2);
-    font-size: 18px;
-    padding: 8px;
-    text-align: center;
     margin-right: 40px;
-    background-color: var(--orange);
-    border: none;
+    background: none;
+    font-size: 20px;
+    padding: 12px;
+    color: black;
+    text-align: center;
+    border: 2px solid var(--orange);
     border-radius: 5px;
-    width: 200px;
+    width: 232px;
     font-weight: bolder;
+    margin-top: 8px;
 }
 
 .enroll-button {
     font-family: var(--font-family2);
-    font-size: 18px;
-    padding: 8px;
-    text-align: center;
     margin-left: 40px;
-    background-color: var(--linear-green2);
+    font-size: 24px;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    background: var(--linear-green2);
     border: none;
     border-radius: 5px;
     width: 200px;
     font-weight: bolder;
+    margin-top: 8px;
 }
 
 .gallery {
