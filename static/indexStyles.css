@@ -39,7 +39,7 @@ ul {
 }
 
 .why-choose-us {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -48,6 +48,7 @@ ul {
     height: 108px;
     width: 360px;
     border-radius: 20px 20px 0 0;
+    opacity: 0.9;
 }
 
 .why-choose-us .text {
@@ -65,6 +66,224 @@ ul {
     font-family: var(--font-family2);
     font-weight: bolder;
     text-align: center;
+}
+
+.cards {
+    display: grid;
+    width: 100%;
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+    align-items: start;
+}
+
+.card {
+    background-color: var(--dark-green);
+    height: 350px;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.special {
+    background-color: var(--linear-green2);
+    height: 350px;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.card h2, .special h2 {
+    font-family: var(--font-family);
+    color: white;
+    text-align: center;
+    padding: 8px 8px 16px 8px;
+}
+
+.card p, .special p {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-family: var(--font-family2);
+    padding: 16px 8px 8px 8px;
+    font-size: 18px;
+}
+
+.card img, .special img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    height: 142px;
+}
+
+.buttons {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.enquiry-button {
+    font-family: var(--font-family2);
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    margin-right: 40px;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-weight: bolder;
+}
+
+.enroll-button {
+    font-family: var(--font-family2);
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    margin-left: 40px;
+    background-color: var(--linear-green2);
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-weight: bolder;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    width: 95%;
+    margin: auto;
+}
+
+.row-1 {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.row-2 {
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.row-3 {
+    width: 100%;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.gallery-images {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+}
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 95%;
+    gap: 56px;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+.video-container {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.video-section video {
+    width: 100%;
+    height: 328px;
+    object-fit: fill;
+}
+
+.about-wonderland {
+    width: 100%; 
+    text-align: center; 
+    color: black; 
+    font-size: 18px; 
+    font-family: var(--font-family); 
+    font-weight: 400; 
+    word-wrap: break-word;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    height: 256px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+    overflow: hidden;
+    padding-top: 24px;
+    margin-top: 8px;
+}
+
+.about-wonderland-text {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+}
+
+.motto-container {
+    width: 100%; 
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+}
+
+.motto-text {
+    flex: 1 1 0; 
+    justify-self: flex-start;
+    font-size: 20px; 
+    font-family: var(--font-family); 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+
+.motto-text p {
+    background: var(--colorful-gradient);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.motto-bars {
+    flex: 1 1 0; 
+    text-align: center; 
+    color: black; 
+    font-size: 20px; 
+    font-family: var(--font-family); 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+
+.enroll-now {
+    font-family: var(--font-family2);
+    font-size: 24px;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    background: var(--linear-green2);
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-weight: bolder;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 24px;
 }
 
 

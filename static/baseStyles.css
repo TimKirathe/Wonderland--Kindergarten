@@ -6,6 +6,8 @@
     --purple: #3C3D8F;
     --orange: #F58634;
     --white: #FFFFFF;
+    --dark-green: #006C51;
+    --colorful-gradient: linear-gradient(114deg, #F58634 20%, #28D6AA 80%);
 }
 
 *, *::before, *::after {
@@ -19,9 +21,9 @@ html {
 
 body {
     width: 100%;
-    margin: auto;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 header {
