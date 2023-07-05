@@ -1,201 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WONDERLAND KINDERGARTEN</title>
-    <meta name="description" content="Description of your website for search engines">
-    <meta name="keywords" content="keywords, relevant, to, your, website">
-    <meta name="author" content="Your Name">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ffffff"> <!-- Set the theme color for mobile browsers -->
-    <link rel="canonical" href="https://www.your-website-url.com"> <!-- Specify the canonical URL for duplicate content -->
-    
-    <!-- Open Graph meta tags (for social sharing) -->
-    <meta property="og:title" content="Your Website Title">
-    <meta property="og:description" content="Description of your website for social sharing">
-    <meta property="og:image" content="https://www.your-website-url.com/images/og-image.jpg">
-    <meta property="og:url" content="https://www.your-website-url.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Your Website Title">
-    <meta name="twitter:description" content="Description of your website for Twitter sharing">
-    <meta name="twitter:image" content="https://www.your-website-url.com/images/twitter-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'indexStyles.css') }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <script src="{{ url_for('static', filename='script.js')}}" defer></script>
-</head>
-<body>
-    <header>
-        <!-- <input type="checkbox" class="nav-toggle" id="nav-toggle" /> -->
-        <nav>
-            <div class="navbar">
-                <div class="nav-row-1">
-                    <img class="logo-text" src="{{ url_for('static', filename = 'WONDERLAND-upscaled-no-bg.png')}}" />
-                </div>
-                <div class="nav-row-2">
-                    <div class="nav-items"><a href="#">HOME</a></div>
-                    <div class="nav-items"><a href="#">ABOUT US</a></div>
-                    <div class="nav-items"><a href="#">OUR SERVICES</a></div>
-                    <div class="nav-items"><a href="#">OUR BLOG</a></div>
-                    <div class="nav-items"><a href="#">TESTIMONIALS</a></div>
-                    <div class="nav-items"><a href="#">CONTACT US</a></div>
-                </div>
+{% extends 'base.html' %}
+
+{% block stylesheet %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'indexStyles.css') }}" />
+{% endblock %}
+
+{% block content %}
+<section aria-label="School Photos Carousel">
+    <div class="carousel" data-carousel>
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="{{ url_for('static', filename='slider-photo-1.png')}}" alt="Photo of a girl writing in class" />
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='slider-photo-2.png')}}" alt="Photo of a boy playing football" />
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='slider-photo-3.png')}}" alt="Photo of the grade 2 graduating class" />
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='slider-photo-4.png')}}" alt="Photo of girls smiling together in the school bus on the way home" />
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='slider-photo-5.png')}}" alt="Closeup photo of a young girl smiling in class" />
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='slider-photo-6.png')}}" alt="Photo of a gril smiling while swimming" />
+            </li>
+        </ul>
+        <div class="why-choose-us">
+            <div class="text">
+                <p>Why Choose Us?</p>
             </div>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
-    </header>
-    <section aria-label="School Photos Carousel">
-        <div class="carousel" data-carousel>
-            <ul data-slides>
-                <li class="slide" data-active>
-                    <img src="{{ url_for('static', filename='slider-photo-1.png')}}" alt="Photo of a girl writing in class" />
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='slider-photo-2.png')}}" alt="Photo of a boy playing football" />
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='slider-photo-3.png')}}" alt="Photo of the grade 2 graduating class" />
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='slider-photo-4.png')}}" alt="Photo of girls smiling together in the school bus on the way home" />
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='slider-photo-5.png')}}" alt="Closeup photo of a young girl smiling in class" />
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='slider-photo-6.png')}}" alt="Photo of a gril smiling while swimming" />
-                </li>
-            </ul>
-            <div class="why-choose-us">
-                <div class="text">
-                    <p>Why Choose Us?</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="cards">
-        <div class="card">
-            <h2>Experience</h2>
-            <img src="{{ url_for('static', filename='girl-writing-2.png')}}" alt="Another girl writing in class" />
-            <p>
-                Now in our <i>fifth</i> decade of service, we have established a reputation for excellence, in providing 
-                superior education for young children. We do this in an atmosphere of Christian love and culture, based on Biblical 
-                values.
-            </p>
-        </div>
-        <div class="special">
-            <h2>Academic Excellence</h2>
-            <img src="{{ url_for('static', filename='classroom.png')}}" alt="Children in a class doing work" />
-            <p>
-                Today, our teachers are trained in the new curriculum and continue to eagerly prepare our young learners to be 
-                effective and productive members of our society through competency based learning.
-            </p>
-        </div>
-        <div class="card">
-            <h2>Co-Curriculum</h2>
-            <img src="{{ url_for('static', filename='abacus.png')}}" alt="Boy playing abacus" />
-            <p>
-                At Wonderland your child will never lack something to do. We offer a wide range of extra-curricular activities 
-                like abacus, swimming, football, skating, music, ballet and more!
-            </p>
         </div>
     </div>
-    <div class="buttons">
-        <button class="enquiry-button">
-            Make An Enquiry
-        </button>
-        <button class="enroll-button">
-            Enroll Now
-        </button>
+</section>
+<div class="cards">
+    <div class="card">
+        <h2>Experience</h2>
+        <img src="{{ url_for('static', filename='girl-writing-2.png')}}" alt="Another girl writing in class" />
+        <p>
+            Now in our <i>fifth</i> decade of service, we have established a reputation for excellence, in providing 
+            superior education for young children. We do this in an atmosphere of Christian love and culture, based on Biblical 
+            values.
+        </p>
     </div>
-    <div class="gallery">
-        <div class="row-1">
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-1.png')}}" alt="children in swimming pool" />
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-2.png')}}" alt="boys ready to play football posing for photo" />
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-3.png')}}" alt="man speaking at a conference in school" />
-        </div>
-        <div class="row-2">
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-4.png')}}" alt="beautiful cakes baked for the graduating class grade 1" />
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-5.png')}}" alt="children performing a skit and acting" />
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-6.png')}}" alt="poster showing the amazing art done by the school children" />
-        </div>
-        <div class="row-3">
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-7.png')}}" alt="little girl swimming at a swimming gala competition" />
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-8.png')}}" alt="girl having her packed breal while in class with friends" />
-            <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-9.png')}}" alt="students working together on worksheets together" />
-        </div>
+    <div class="special">
+        <h2>Academic Excellence</h2>
+        <img src="{{ url_for('static', filename='classroom.png')}}" alt="Children in a class doing work" />
+        <p>
+            Today, our teachers are trained in the new curriculum and continue to eagerly prepare our young learners to be 
+            effective and productive members of our society through competency based learning.
+        </p>
     </div>
-    <section class="video-section" aria-label="Video Section">
-        <div class="about-wonderland">
-            <div class="about-wonderland-text">
-                We give individual attention to every child, making sure they feel loved and safe in an atmosphere of fun and adventure. At Wonderland Kindergarten & Early Years:
-            </div>
-            <div class="motto-container">
-                <div class="motto-text"><p>We learn</p></div>
-                <div class="motto-bars">|</div>
-                <div class="motto-text"><p>We care</p></div>
-                <div class="motto-bars">|</div>
-                <div class="motto-text"><p>We play</p></div>
-            </div>
-            <button class="enroll-now">Enroll <span>Now</span></button>
+    <div class="card">
+        <h2>Co-Curriculum</h2>
+        <img src="{{ url_for('static', filename='abacus.png')}}" alt="Boy playing abacus" />
+        <p>
+            At Wonderland your child will never lack something to do. We offer a wide range of extra-curricular activities 
+            like abacus, swimming, football, skating, music, ballet and more!
+        </p>
+    </div>
+</div>
+<div class="buttons">
+    <button class="enquiry-button">
+        Make An Enquiry
+    </button>
+    <button class="enroll-button">
+        Enroll Now
+    </button>
+</div>
+<div class="gallery">
+    <div class="row-1">
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-1.png')}}" alt="children in swimming pool" />
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-2.png')}}" alt="boys ready to play football posing for photo" />
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-3.png')}}" alt="man speaking at a conference in school" />
+    </div>
+    <div class="row-2">
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-4.png')}}" alt="beautiful cakes baked for the graduating class grade 1" />
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-5.png')}}" alt="children performing a skit and acting" />
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-6.png')}}" alt="poster showing the amazing art done by the school children" />
+    </div>
+    <div class="row-3">
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-7.png')}}" alt="little girl swimming at a swimming gala competition" />
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-8.png')}}" alt="girl having her packed breal while in class with friends" />
+        <img class="gallery-images" src="{{ url_for('static', filename='gallery-photo-9.png')}}" alt="students working together on worksheets together" />
+    </div>
+</div>
+<section class="video-section" aria-label="Video Section">
+    <div class="about-wonderland">
+        <div class="about-wonderland-text">
+            We give individual attention to every child, making sure they feel loved and safe in an atmosphere of fun and adventure. At Wonderland Kindergarten & Early Years:
         </div>
-        <div class="video-container">
-            <video src="{{ url_for('static', filename='wonderland-video.mp4')}}" controls></video>
+        <div class="motto-container">
+            <div class="motto-text"><p>We learn</p></div>
+            <div class="motto-bars">|</div>
+            <div class="motto-text"><p>We care</p></div>
+            <div class="motto-bars">|</div>
+            <div class="motto-text"><p>We play</p></div>
         </div>
-    </section>
-    <section aria-label="Google Maps Location" class="maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.027696603725!2d36.7812772!3d-1.3216287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbd40e41a34bb31b!2sWonderland%20Kindergarten!5e0!3m2!1sen!2ske!4v1635940469544!5m2!1sen!2ske" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-    <footer class="footer" aria-label="Footer Section">
-        <div class="footer-row1">
-            <div class="footer-title-section">
-                <h1 class="footer-title">Wonderland Kindergarten & Early Years School</h1>
-            </div>
-        </div>
-        <div class="footer-row2">
-            <div class="contact-section">
-                <h3 class="contact-title">Contact Us</h3>
-                <ul class="contact-information">
-                    <li class="contact-item">Email: info@wonderland.sc.ke</li>
-                    <li class="contact-item">Phone: +254 738 626 219</li>
-                    <li class="contact-item">Ngei Estate Phase 1, Kalobot road, Langata, Nairobi, Kenya</li>
-                </ul>
-            </div>
-            <div class="about-section">
-                <div class="row-1">
-                    <div class="col-1">
-                        <h3 class="about-title">About</h3>
-                        <ul class="about-information">
-                            <li class="about-item">Events</li>
-                            <li class="about-item">Who are we?</li>
-                        </ul>
-                    </div>
-                    <div class="col-2">
-                        <button class="footer-enroll">Enroll Now</button>
-                    </div>
-                    <div class="col-3">
-                        <button class="footer-enquire">Make An Enquiry</button>
-                    </div>
-                </div>
-                <div class="row-2">
-                    <p>© Copyright All Rights Reserved 2023 Wonderland Kindergarten & Early Years School Designed by TKDesigns</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+        <button class="enroll-now">Enroll <span>Now</span></button>
+    </div>
+    <div class="video-container">
+        <video src="{{ url_for('static', filename='wonderland-video.mp4')}}" controls></video>
+    </div>
+</section>
+<section aria-label="Google Maps Location" class="maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.027696603725!2d36.7812772!3d-1.3216287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbd40e41a34bb31b!2sWonderland%20Kindergarten!5e0!3m2!1sen!2ske!4v1635940469544!5m2!1sen!2ske" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+{% endblock %}
+

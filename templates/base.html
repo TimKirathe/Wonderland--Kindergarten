@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Wonderland Kindergarten{% endblock %}</title>
+    <meta name="description" content="Description of your website for search engines">
+    <meta name="keywords" content="keywords, relevant, to, your, website">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff"> <!-- Set the theme color for mobile browsers -->
+    <link rel="canonical" href="https://www.your-website-url.com"> <!-- Specify the canonical URL for duplicate content -->
+    
+    <!-- Open Graph meta tags (for social sharing) -->
+    <meta property="og:title" content="Your Website Title">
+    <meta property="og:description" content="Description of your website for social sharing">
+    <meta property="og:image" content="https://www.your-website-url.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.your-website-url.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Website Title">
+    <meta name="twitter:description" content="Description of your website for Twitter sharing">
+    <meta name="twitter:image" content="https://www.your-website-url.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    {% block stylesheet %} <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'baseStyles.css') }}" />{% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js')}}" defer></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="nav-row-1">
+                    <img class="logo-text" src="{{ url_for('static', filename = 'WONDERLAND-upscaled-no-bg.png')}}" />
+                </div>
+                <div class="nav-row-2">
+                    <div class="nav-items"><a href="#">HOME</a></div>
+                    <div class="nav-items"><a href="#">ABOUT US</a></div>
+                    <div class="nav-items"><a href="#">OUR SERVICES</a></div>
+                    <div class="nav-items"><a href="#">OUR BLOG</a></div>
+                    <div class="nav-items"><a href="#">TESTIMONIALS</a></div>
+                    <div class="nav-items"><a href="#">CONTACT US</a></div>
+                </div>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+
+    {% block content %}
+    {% endblock%}
+
+    <footer class="footer" aria-label="Footer Section">
+        <div class="footer-row1">
+            <div class="footer-title-section">
+                <h1 class="footer-title">Wonderland Kindergarten & Early Years School</h1>
+            </div>
+        </div>
+        <div class="footer-row2">
+            <div class="contact-section">
+                <h3 class="contact-title">Contact Us</h3>
+                <ul class="contact-information">
+                    <li class="contact-item">Email: info@wonderland.sc.ke</li>
+                    <li class="contact-item">Phone: +254 738 626 219</li>
+                    <li class="contact-item">Ngei Estate Phase 1, Kalobot road, Langata, Nairobi, Kenya</li>
+                </ul>
+            </div>
+            <div class="about-section">
+                <div class="row-1">
+                    <div class="col-1">
+                        <h3 class="about-title">About</h3>
+                        <ul class="about-information">
+                            <li class="about-item">Events</li>
+                            <li class="about-item">Who are we?</li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <button class="footer-enroll">Enroll Now</button>
+                    </div>
+                    <div class="col-3">
+                        <button class="footer-enquire">Make An Enquiry</button>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <p>© Copyright All Rights Reserved 2023 Wonderland Kindergarten & Early Years School Designed by TKDesigns</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
