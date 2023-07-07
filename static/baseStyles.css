@@ -8,6 +8,9 @@
     --white: #FFFFFF;
     --dark-green: #006C51;
     --colorful-gradient: linear-gradient(114deg, #F58634 20%, #28D6AA 80%);
+    --purple2: #3A53C7;
+    --dark-green2: #003D1F;
+    --light-green: #D9EDDF;
 }
 
 *, *::before, *::after {
@@ -39,14 +42,13 @@ nav {
     display: grid;
     width: 100%; 
     height: 100%; 
-    padding-left: 8px; 
-    padding-right: 8px; 
     background: var(--linear-green2); 
     grid-template-columns: repeat(6, 1fr);
 }
 
 .nav-row-1 {
-    grid-column: span 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
     height: 100%; 
     padding-left: 16px;
 }
@@ -89,7 +91,7 @@ a {
 }
 
 .nav-items a:hover {
-    color: #000000;
+    color: var(--purple2);
 }
 
 a::before {
@@ -101,7 +103,7 @@ a::before {
     width: 0%;
     height: 4px;
     margin-bottom: 8px;
-    background: #000000;
+    background: var(--purple2);
     border-radius: 4px;
     transition-property: width;
     transition-duration: 500ms;
@@ -119,14 +121,14 @@ a:hover::before {
     display: grid;
     grid-template-rows: repeat(1fr, 1fr);
     width: 100%;
-    background: var(--linear-green2);
+    background: var(--linear-green);
     gap: 16px;
     height: 300px;
 }
 
 .footer-row1 {
     width: 85%;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     align-self: center;
     justify-self: center;
     padding: 16px;
@@ -140,8 +142,8 @@ a:hover::before {
 .footer-title {
     text-align: center;
     font-family: var(--font-family);
-    color: white;
-    letter-spacing:2px;
+    color: var(--orange);
+    letter-spacing: 1px;
     font-size: 30px;
 }
 
@@ -171,7 +173,9 @@ a:hover::before {
 
 .footer-row2 .contact-section h3, .footer-row2 .about-section h3 {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 8px;
 }
 
 .footer-row2 .contact-section ul, .footer-row2 .about-section ul {
@@ -184,6 +188,7 @@ a:hover::before {
     font-size: 16px;
     display: block;
     padding: 4px;
+    margin-top: 8px;
 }
 
 .footer-row2 .about-section ul .about-item {
@@ -191,7 +196,7 @@ a:hover::before {
 }
 
 .footer-row2 .about-section ul .about-item:hover {
-    color: black;
+    color: var(--purple);
 }
 
 .footer-row2 .about-section {
@@ -210,7 +215,7 @@ a:hover::before {
     grid-row-end: 2;
     gap: 12px;
     width: 100%;
-    border-bottom: 2px solid white;;
+    border-bottom: 1px solid white;
 }
 
 .footer-row2 .about-section .row-1 .col-1 {
@@ -248,28 +253,47 @@ a:hover::before {
     color: white;
     text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     width: 180px;
     font-weight: bolder;
     align-self: center;
     justify-self: center;
     margin-top: 24px;
     cursor: pointer;
+    transition-property: width font-size;
+    transition-duration: 1000ms 1000ms;
+    transition-timing-function: ease-in-out;
+
+}
+
+.footer-enroll:hover {
+    width: 190px;
+    font-size: 22px;
 }
 
 .footer-enquire {
-    background: none;
+    background: #3BE4AC;
     font-family: var(--font-family2);
     font-size: 20px;
     padding: 12px;
     color: white;
     text-align: center;
-    border: 1px solid var(--orange);
-    border-radius: 5px;
+    /* border: 1px solid var(--orange); */
+    border: none;
+    border-radius: 20px;
     width: 180px;
     font-weight: bolder;
     align-self: center;
     justify-self: center;
     margin-top: 24px;
     cursor: pointer;
+    transition-property: border background-color;
+    transition-duration: 1000ms 4000ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: left;
+}
+
+.footer-enquire:hover {
+    border: none;
+    background-color: #3BE4AC;
 }

@@ -1,1 +1,130 @@
 @import url("baseStyles.css");
+
+main {
+    width: 100%;
+    margin: 24px auto;
+}
+
+main .about-content {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+main .about-content .col-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+    height: 100%;
+    border-radius: 8px;
+}
+
+main .about-content .col-1 h1 {
+    font-family: var(--font-family);
+    text-align: left;
+    font-weight: 900;
+    color:#3A53C7;
+}
+
+main .about-content .col-1 p {
+    font-family: var(--font-family2);
+    text-align: left;
+    margin-top: 8px;
+}
+
+main .about-content .col-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: center;
+}
+
+main .about-content .col-2 img {
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+    object-position: 15% 50%;
+    border-radius: 8px;
+}
+
+main .motto-content {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 24px; 
+}
+
+main .motto-content .row1 h1 {
+    font-family: var(--font-family);
+    text-align: center;
+    font-weight: 900;
+    color: #3A53C7;
+}
+
+main .motto-content .row2 {
+    margin-top: 24px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.motto-row-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.motto-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-left: 100px;
+}
+
+.motto-row-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.motto-col-1 {
+    justify-self: center;
+}
+
+.motto-col-2 {
+    justify-self: center;
+}
+
+.motto-images {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.motto-images-2 {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    object-position: 10% 50%;
+}
+
+.motto-headers {
+    font-family: var(--font-family2);
+    text-align: left;
+    font-weight: 600;
+    color: #3A53C7;
+}
+
+.motto-text {
+    font-family: var(--font-family2);
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+
+

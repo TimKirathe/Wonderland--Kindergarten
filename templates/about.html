@@ -5,5 +5,73 @@
 {% endblock %}
 
 {% block content %}
-
+    <main>
+        <div class="about-content">
+            <div class="col-1">
+                <h1 class="about-title">About Us</h1>
+                <p class="about-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et tortor ac mauris varius porta at sed nibh. 
+                    Integer accumsan felis ut leo varius pulvinar tincidunt eget elit. Donec eu volutpat tellus. Cras pellentesque ultricies faucibus. 
+                    Suspendisse commodo eros eget fermentum tincidunt. Proin rhoncus tincidunt urna rhoncus tempor. 
+                    Nam neque eros, placerat et tortor id, tempus congue lacus. Vivamus efficitur volutpat erat facilisis ullamcorper. 
+                </p>
+            </div>
+            <div class="col-2">
+                <img src="{{ url_for('static', filename='slider-photo-4.png')}}" alt="About Wonderland Image" />
+            </div>
+        </div>
+        <div class="motto-content">
+            <div class="row1">
+                <h1 class="motto-title">Our Motto</h1>
+            </div>
+            <div class="row2">
+                <div class="motto-row-1">
+                    <div class="motto-col-1">
+                        <img class="motto-images" src="{{ url_for('static', filename='gallery-photo-9.png')}}" alt="Photo of a boy writing in class as part of our motto" />
+                    </div>
+                    <div class="motto-col-2">
+                        <h2 class="motto-headers">We learn</h2>
+                        <p class="motto-text">
+                            Proin lobortis lobortis ligula a vestibulum. Nunc quis varius eros, non auctor velit. Nam dignissim, neque ut tempor varius, 
+                            velit ante blandit dui, non consectetur ligula felis in orci. Phasellus id malesuada nulla.
+                        </p>
+                    </div>
+                </div>
+                <div class="motto-row-2">
+                    <div class="motto-col-1">
+                        <h2 class="motto-headers">We care</h2>
+                        <p class="motto-text">
+                            Proin lobortis lobortis ligula a vestibulum. Nunc quis varius eros, non auctor velit. Nam dignissim, neque ut tempor varius, 
+                            velit ante blandit dui, non consectetur ligula felis in orci. Phasellus id malesuada nulla.
+                        </p>
+                    </div>
+                    <div class="motto-col-2">
+                        <img class="motto-images" src="{{ url_for('static', filename='girl-drinking-juice.jpg')}}" alt="Photo of a girl taking her juice during break time" />
+                    </div>
+                </div>
+                <div class="motto-row-3">
+                    <div class="motto-col-1">
+                        <img class="motto-images-2" src="{{ url_for('static', filename='slider-photo-5.png')}}" alt="Photo of a girl smiling intently at the camera" />
+                    </div>
+                    <div class="motto-col-2">
+                        <h2 class="motto-headers">We play</h2>
+                        <p class="motto-text">
+                            Proin lobortis lobortis ligula a vestibulum. Nunc quis varius eros, non auctor velit. Nam dignissim, neque ut tempor varius, 
+                            velit ante blandit dui, non consectetur ligula felis in orci. Phasellus id malesuada nulla.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Proin lobortis lobortis ligula a vestibulum. Nunc quis varius eros, non auctor velit. Nam dignissim, neque ut tempor varius, 
+            velit ante blandit dui, non consectetur ligula felis in orci. Phasellus id malesuada nulla. 
+            Phasellus ut nisi arcu. Sed sit amet nibh faucibus erat dapibus tempor. 
+            Sed in odio ac tellus posuere euismod ut egestas libero. 
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+            Nam iaculis in arcu nec varius. Donec velit mauris, hendrerit eu vestibulum a, sagittis sit amet turpis. 
+            Suspendisse turpis justo, vehicula a venenatis non, auctor ac nisi. Etiam non consequat urna, nec ultrices ante. 
+            Vestibulum fermentum erat vel diam dapibus, quis mattis ligula luctus. 
+            Morbi leo nisl, ullamcorper a aliquam sed, posuere quis enim. 
+            Donec venenatis, augue non feugiat porttitor, nulla tellus vestibulum elit, id dignissim lorem turpis vel tortor. -->
+    </main>
 {% endblock %}

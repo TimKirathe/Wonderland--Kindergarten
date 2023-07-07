@@ -1,0 +1,223 @@
+@import url("baseStyles.css");
+
+.contact-us-section {
+    width: 100%;
+    height: auto;
+}
+
+.main-header1 {
+    font-size: 40px;
+    font-family: var(--font-family);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--purple2);
+    margin: 16px 0 16px 0;
+}
+
+.contact-form {
+    width: 90%;
+    margin: 0 auto 88px auto;
+    padding: 24px;
+    position: relative;
+    height: 650px;
+}
+
+.enroll, .enquire {
+    display: inline;
+    font-family: var(--font-family2);
+    font-size: 22px;
+    border: 1px solid black;
+    padding: 8px 8px 0 8px;
+    cursor: pointer;
+}
+
+.enquire p, .enroll p {
+    display: inline;
+    text-align: center;
+    /* padding: 8px 8px 12px 8px; */
+    position: relative;
+    top: -0.8%;
+    left: 0%;
+    transform: translateX(-0%);
+}
+
+.enroll {
+    background-color: var(--purple2);
+    opacity: 1;
+}
+
+.enroll p {
+    color: white;
+}
+
+.enquire {
+    background: var(--purple2);
+    opacity: 0.4;
+}
+
+.enquire p {
+    color: white;
+}
+
+form {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
+    border: 1px solid var(--purple2);
+    border-radius: 0 8px 8px 8px;
+    padding: 24px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: span 1;
+    gap: 12px;
+    position: relative;
+    height: 80%;
+    width: 100%;
+    margin: auto;
+}
+
+.last-student-group {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+.inner-form-groups {
+    position: relative;
+    grid-column: span 1;
+}
+
+.inner-address-groups {
+    position: relative;
+    grid-column: span 1;
+}
+
+.inner-form-groups .labels {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    opacity: 0.7;
+    color: grey;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+    cursor: text;
+}
+
+.inner-address-groups .labels {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    opacity: 0.7;
+    color: grey;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+    cursor: text;
+}
+
+.inner-form-groups input {
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    transform: translateX(-15%);
+    outline: none;
+    width: 90%;
+    padding: 4px;
+    margin: 4px auto;
+    background: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.inner-address-groups input {
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    transform: translateX(-15%);
+    outline: none;
+    width: 90%;
+    padding: 4px;
+    margin: 4px auto;
+    background: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.form-control:focus ~ .labels, .form-control:valid ~ .labels {
+    top: -5%;
+    left: 5%;
+    font-size: 12px;
+    color: var(--dark-green);
+    padding-left: 2px;
+    padding-right: 2px;
+    background: white;
+    margin-bottom: 0;
+    opacity: 1;
+    border-radius: 4px;
+}
+
+.form-control:focus, .form-control:valid {
+    border: 1px solid var(--purple2);
+    border-radius: 5px;
+}
+
+.form-control:valid {
+    background: white;
+}
+
+label {
+    display: block;
+    font-family: var(--font-family2);
+    font-size: 18px;
+}
+
+input {
+    display: block;
+    font-family: var(--font-family2);
+    font-size: 16px;
+}
+
+.labels {
+    padding: 4px;
+    position: relative;
+    left: 4%;
+}
+
+.special-label {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-size: 12px;
+    color: black;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: white;
+    cursor: text;
+    border-radius: 4px;
+}
+
+.form-control:focus ~ .special-label {
+    color: var(--dark-green);
+}
+
+.form-button {
+    background: var(--purple2);
+    color: white;
+    width: 100px;
+    height: 30px;
+    justify-self: start;
+    text-align: center;
+    font-family: var(--font-family2);
+    font-weight: bolder;
+    font-size: 18px;
+    position: relative;
+    left: 3%;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 4px;
+}
