@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
 
+{% block title %}
+<title>Contact Us</title>
+{% endblock %}
+
 {% block stylesheet %}
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'contactStyles.css') }}" />
 {% endblock %}
+
+{% block script %}<script src="{{ url_for('static', filename='contactScripts.js')}}" defer></script>{% endblock %}
 
 {% block content %}
 <section class="contact-us-section" aria-label="Contact Us Section and Form">
     <h1 class="main-header1">Kindly Fill In The Form Below:</h1>
     <div class="contact-form">
-        <div class="enroll">
-            <p>Enroll</p>
+        <div class="enroll clicked">
+            <p class="clicked-p">Enroll</p>
         </div>
         <div class="enquire">
             <p>Enquire</p>
         </div>
-        <form action="" method="post">
+        <form class="form1" action="{{ url_for('contact')}}" method="post">
             <div class="form-group">
                 <div class="inner-form-groups">
                     <input type="text" id="firstName" class="form-control" autocomplete="off" required/>
@@ -86,6 +92,21 @@
                 </div>
             </div>
             <button type="submit" class="form-button">Submit</button>
+        </form>
+        <form action="{{ url_for('contact')}}" class="form2">
+            <div class="form2-group">
+                <input name="parentEnquiryName" id="enquiryName" type="text" class="form2-control" required/>
+                <label class="form2-labels" for="enquiryName">Full Name:</label>
+            </div>
+            <div class="form2-group">
+                <input name="parentEnquiryEmail" id="enquiryEmail" type="email" class="form2-control" required/>
+                <label class="form2-labels" for="enquiryEmail">Email Address:</label>
+            </div>
+            <div class="form2-group">
+                <textarea name="enquiry" id="enquiry" cols="30" rows="4" class="text-area" required></textarea>
+                <label class="area-label" for="enquiry">Enquiry:</label>
+            </div>
+            <button class="enquiry-submit">Submit</button>
         </form>
     </div>
 </section>

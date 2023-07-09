@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 from flask import Flask, request, render_template, jsonify, redirect, url_for, session, request
 from flask_session import Session
+from flask_sqlalchemy import SQLAlchemy
 
 
 load_dotenv()
@@ -26,8 +27,16 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/contact")
+@app.route("/contact", methods = ['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        if request.form["enquiry"]:
+            parent_name = request.form["parentEnquiryName"]
+            parent_email = request.form["parentEnquiryEmail"]
+            parent_enquiry = request.form["enquiry"]
+
+        else:
+
     return render_template("contact.html")
 
 if __name__ == "__main__":
